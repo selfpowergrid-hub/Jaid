@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="background:#0a0a0a;">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4b96a"/>
+      <stop offset="50%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#a8892e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Golden Border -->
+  <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+
+  <!-- Eagle Composite -->
+  <g transform="translate(50, 45) rotate(-10) scale(0.4)">
+    
+    <!-- White Tail Fan -->
+    <path d="M15 50 L30 75 L55 60 L45 35 Z" fill="#ffffff"/>
+    
+    <!-- Left Wing (Top/Main) - Detailed Primary Feathers -->
+    <g fill="#1a1a1a">
+      <path d="M-10 -10 C-5 -30 0 -60 20 -85 L25 -70 L30 -80 L35 -65 L40 -75 L45 -60 L50 -70 L55 -55 C40 -45 20 -25 0 -15 Z"/>
+      <!-- Individual Feathers -->
+      <path d="M20 -85 L22 -75 L25 -70 Z"/>
+      <path d="M30 -80 L32 -70 L35 -65 Z"/>
+      <path d="M40 -75 L42 -65 L45 -60 Z"/>
+    </g>
+
+    <!-- Right Wing (Bottom/Perspective) -->
+    <path d="M-10 15 C-20 30 -15 50 5 65 L10 50 L15 60 L20 45 C10 35 0 25 -5 15 Z" fill="#1a1a1a"/>
+
+    <!-- Body (Black) -->
+    <path d="M-20 0 L5 5 L10 35 L-20 25 Z" fill="#1a1a1a"/>
+
+    <!-- Head & Neck (White) -->
+    <path d="M-20 0 C-30 -10 -40 -5 -50 5 C-45 15 -35 15 -25 10 Z" fill="#ffffff"/>
+    
+    <!-- Beak (Gold) -->
+    <path d="M-50 5 L-58 10 L-55 15 Z" fill="url(#gold)"/>
+
+    <!-- Feet (Gold) -->
+    <path d="M-5 35 L-10 42 L5 40 Z" fill="url(#gold)"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="50" y="88" text-anchor="middle" fill="url(#gold)" font-family="Montserrat, sans-serif" font-weight="700" font-size="8" letter-spacing="3">JAID</text>
+</svg>
