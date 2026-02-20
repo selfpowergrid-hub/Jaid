@@ -35,7 +35,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© {currentYear} Jaid Investments Co. Ltd. All rights reserved.</p>
+                    <p>© {currentYear} Jaid Investments Ltd. All rights reserved.</p>
                     <p>NCA4 Certified Contractor • Uasin Gishu County, Kenya</p>
                 </div>
             </div>

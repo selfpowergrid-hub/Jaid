@@ -45,7 +45,7 @@ export default function Navbar() {
           <img src={logoImg} alt="Jaid Investments Logo" style={{ width: '44px', height: '44px', objectFit: 'contain' }} />
           <div className="navbar-logo-text">
             Jaid Investments
-            <span>Co. Ltd.</span>
+            <span>Ltd.</span>
           </div>
         </a>
 
