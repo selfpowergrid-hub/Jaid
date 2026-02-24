@@ -9,7 +9,7 @@ const documents = [
     type: 'PDF'
   },
   {
-    name: 'NCA4 Certificate',
+    name: 'NCA1 Certificate',
     file: '/documents/JAID_INVESTMENTS_PROFILE.pdf',
     size: '—',
     type: 'PDF'
@@ -22,10 +22,11 @@ const documents = [
   }
 ]
 
-export default function Navbar() {
+export default function Navbar({ onOpenGallery }) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [docsOpen, setDocsOpen] = useState(false)
+  const [galleryOpen, setGalleryOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -36,6 +37,12 @@ export default function Navbar() {
   const scrollTo = (id) => {
     setMobileOpen(false)
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleOpenGallery = (category) => {
+    setGalleryOpen(false)
+    setMobileOpen(false)
+    if (onOpenGallery) onOpenGallery(category)
   }
 
   return (
@@ -52,11 +59,38 @@ export default function Navbar() {
         <div className={`navbar-links ${mobileOpen ? 'mobile-open' : ''}`}>
           <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About</a>
           <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }}>Services</a>
+
+          <div className={`nav-dropdown ${galleryOpen ? 'open' : ''}`}>
+            <button className="nav-dropdown-trigger" onClick={() => { setGalleryOpen(!galleryOpen); setDocsOpen(false); }}>
+              Service Gallery
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+            </button>
+            <div className="nav-dropdown-menu">
+              <a href="#" onClick={(e) => { e.preventDefault(); handleOpenGallery('Civil Engineering'); }} className="nav-dropdown-item">
+                <div className="doc-info">
+                  <div>Civil Engineering</div>
+                </div>
+              </a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleOpenGallery('Water & Irrigation'); }} className="nav-dropdown-item">
+                <div className="doc-info">
+                  <div>Water & Irrigation</div>
+                </div>
+              </a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleOpenGallery('Building Works'); }} className="nav-dropdown-item">
+                <div className="doc-info">
+                  <div>Building Works</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <a href="#fleet" onClick={(e) => { e.preventDefault(); scrollTo('fleet') }}>Fleet</a>
           <a href="#safety" onClick={(e) => { e.preventDefault(); scrollTo('safety') }}>Safety</a>
 
           <div className={`nav-dropdown ${docsOpen ? 'open' : ''}`}>
-            <button className="nav-dropdown-trigger" onClick={() => setDocsOpen(!docsOpen)}>
+            <button className="nav-dropdown-trigger" onClick={() => { setDocsOpen(!docsOpen); setGalleryOpen(false); }}>
               Documents
               <svg viewBox="0 0 12 12" fill="none">
                 <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" />

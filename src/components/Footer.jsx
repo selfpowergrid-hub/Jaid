@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="footer-grid">
                     <div className="footer-brand">
                         <img src={logoImg} alt="Jaid Investments Logo" style={{ width: '50px', height: '50px', objectFit: 'contain', marginBottom: '15px' }} />
-                        <p>An NCA4 registered contractor based in Eldoret, Kenya, delivering quality civil engineering, water irrigation, and building services with world class standards.</p>
+                        <p>An NCA1 registered contractor based in Eldoret, Kenya, delivering quality civil engineering, water irrigation, and building services with world class standards.</p>
                     </div>
 
                     <div>
@@ -36,7 +36,7 @@ export default function Footer() {
 
                 <div className="footer-bottom">
                     <p>© {currentYear} Jaid Investments Ltd. All rights reserved.</p>
-                    <p>NCA4 Certified Contractor • Uasin Gishu County, Kenya</p>
+                    <p>NCA1 Certified Contractor • Uasin Gishu County, Kenya</p>
                 </div>
             </div>
         </footer>

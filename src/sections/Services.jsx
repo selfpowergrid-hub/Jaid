@@ -37,7 +37,7 @@ const services = [
     }
 ]
 
-export default function Services() {
+export default function Services({ onOpenGallery }) {
     return (
         <section className="services" id="services">
             <div className="container">
@@ -45,14 +45,14 @@ export default function Services() {
                     <div className="services-header">
                         <div className="section-label" style={{ justifyContent: 'center' }}>What We Do</div>
                         <h2>Specialist Services</h2>
-                        <p>Delivering excellence across civil engineering, water management, and building construction with NCA4 certified expertise.</p>
+                        <p>Delivering excellence across civil engineering, water management, and building construction with NCA1 certified expertise.</p>
                     </div>
                 </ScrollReveal>
 
                 <div className="services-grid">
                     {services.map((service, i) => (
                         <ScrollReveal key={i} delay={i + 1}>
-                            <div className="service-card">
+                            <div className="service-card" style={{ cursor: 'pointer' }} onClick={() => onOpenGallery && onOpenGallery(service.title)}>
                                 <div className="service-icon">
                                     {service.icon}
                                 </div>
@@ -63,6 +63,9 @@ export default function Services() {
                                         <li key={j}>{item}</li>
                                     ))}
                                 </ul>
+                                <button className="btn-outline" style={{ marginTop: '1.5rem', width: '100%', justifyContent: 'center', borderColor: 'var(--color-gold)', color: 'var(--color-gold)' }} onClick={(e) => { e.stopPropagation(); onOpenGallery && onOpenGallery(service.title); }}>
+                                    View Gallery
+                                </button>
                             </div>
                         </ScrollReveal>
                     ))}

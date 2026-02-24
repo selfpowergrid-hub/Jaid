@@ -7,7 +7,7 @@ const knowledgeBase = [
     },
     {
         keywords: ['about', 'who', 'company', 'jaid', 'what is'],
-        response: 'Jaid Investments Co. Ltd. is an NCA4 registered contractor based in Eldoret, Kenya. We specialize in civil engineering, water irrigation, and building works. Our culture is anchored in integrity, quality, and innovation, delivering world class standards across the region.'
+        response: 'Jaid Investments Co. Ltd. is an NCA1 registered contractor based in Eldoret, Kenya. We specialize in civil engineering, water irrigation, and building works. Our culture is anchored in integrity, quality, and innovation, delivering world class standards across the region.'
     },
     {
         keywords: ['service', 'offer', 'do you', 'what do', 'work'],
@@ -31,7 +31,7 @@ const knowledgeBase = [
     },
     {
         keywords: ['nca', 'certif', 'register', 'license', 'category'],
-        response: 'Jaid Investments is registered with the National Construction Authority (NCA) under Category 4 (NCA4). This qualifies us for major civil engineering and building projects as specified by Kenyan construction regulations.'
+        response: 'Jaid Investments is registered with the National Construction Authority (NCA) under Category NCA1. This qualifies us for major civil engineering and building projects as specified by Kenyan construction regulations.'
     },
     {
         keywords: ['tax', 'compliance', 'kra', 'revenue'],
@@ -111,7 +111,7 @@ export default function AiAssistant() {
         'Our Services',
         'Contact Info',
         'Fleet & Equipment',
-        'NCA4 Certification'
+        'NCA1 Certification'
     ]
 
     return (
